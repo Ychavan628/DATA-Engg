@@ -1,0 +1,214 @@
+try:
+risky code --which responsible --exception
+
+except:
+handling code/alternate code
+
+
+try:
+    a = int(input("Enter the  number:"))
+    b = int(input("Enter the  number:"))
+    c = a/b
+    print("Division of {} and {} is {}".format(a,b,c))
+except:
+    print("please check inputs")
+
+print("rest code")
+
+
+try:
+    filename = 'copper_daily.csv'
+    year =filename.split('_')[2]
+
+except:
+    year= 2027
+
+
+print(year)
+print("rest code")
+
+
+except :
+
+it will handle all types of exception
+
+
+
+try:
+    with open("system.txt") as fp:
+        data = fp.read()
+
+    a  =10
+    b = 6
+    c = a/b
+
+    sdafsdgsadgasdgsadg
+
+except FileNotFoundError as msg:
+    print("Check Filename:",msg)
+
+except ZeroDivisionError as msg:
+    print("check number:",msg)
+
+except NameError as msg:
+    print("check variable name:",msg)
+
+except : not recommcomnded
+
+except ZeroDivisionError
+
+except ZeroDivisionError as msg:
+
+
+
+=====================================================================
+finally:
+
+
+try:
+risky code
+
+
+except:
+Handling code
+
+
+
+finally:
+clean up code
+
+
+
+
+try:
+    with open("system.txt") as fp:
+        sdaffsdlkfndfnsdklfsplofsfsd
+        fsdfsd
+        fsdafsd
+        af
+        d
+
+except:
+    print("check content")
+
+finally:
+    print("file closed")
+    fp.close()
+
+
+
+
+
+
+
+CODE Review
+============
+
+import logging
+import os
+import shutil
+logging.basicConfig(filename="server1.log",level=10,
+                    format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
+                    datefmt='%d:%m:%Y %H:%M:%S %p')
+
+def move_files_to_destination(csvlist,inputdir,outputdir):
+    try:
+        for file in csvlist:
+            shutil.copy(inputdir+"/"+file,outputdir)
+            logging.info("copied file from {} to {}".format(inputdir+"/"+file,outputdir))
+            os.remove(inputdir+"/"+file)
+            logging.info("deleting file from {} dir".format(inputdir))
+    except Exception as e:
+        logging.exception(e)
+
+def file_filters_csv(ipdir):
+    try:
+        csv_files = []
+        ListOfDirs = os.listdir(ipdir)
+        for file in ListOfDirs:
+            if file.endswith(".csv"):
+                csv_files.append(file)
+    except Exception as e:
+        logging.exception(e)
+    return csv_files
+
+def main():
+    logging.info("starting execution")
+    try:
+        input_dir = "source"
+        output_dir = "destination"
+        logging.info("input dir selected:{}".format(input_dir))
+        logging.info("output dir selected:{}".format(output_dir))
+        csvfiles = file_filters_csv(input_dir)
+        logging.info("csv Files :{}".format(csvfiles))
+        logging.info("total csv Files Found {}".format(len(csvfiles)))
+        if csvfiles:
+            move_files_to_destination(csvfiles,input_dir,output_dir)
+        else:
+            logging.info("no csv Found in source dir")
+    except Exception as e:
+        logging.exception(e)
+    logging.info("ending execution")
+
+if __name__=='__main__':
+    main()
+
+
+==========================================================================================
+
+
+
+
+try
+except
+finally
+
+
+else :
+addition code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
